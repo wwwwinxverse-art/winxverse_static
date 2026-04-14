@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { featuresData } from "../assets/dummy-data";
 import Title from "./Title";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +5,6 @@ import { motion } from "framer-motion";
 
 export default function Features() {
   const navigate = useNavigate();
-  const refs = useRef([]);
 
   return (
     <section id="features" className="">
@@ -22,7 +20,6 @@ export default function Features() {
           {featuresData.map((feature, i) => (
             <motion.div
               key={i}
-              ref={(el) => (refs.current[i] = el)}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

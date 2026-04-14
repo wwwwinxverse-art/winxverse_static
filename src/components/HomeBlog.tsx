@@ -133,7 +133,7 @@ export default function HomeBlog() {
             transition={{ duration: 0.5 }}
             className="flex"
           >
-            {blogData.map((blog, i) => (
+            {blogData.map((blog) => (
               <div
                 key={blog.slug} // ✅ better key
                 className="px-2 md:px-3 flex-shrink-0"
