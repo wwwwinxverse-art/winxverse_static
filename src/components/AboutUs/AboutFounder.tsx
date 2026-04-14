@@ -1,7 +1,6 @@
-import { useState } from "react";
+
 
 const AboutFounder = () => {
-  const [hovered, setHovered] = useState(false);
 
   return (
     <section
