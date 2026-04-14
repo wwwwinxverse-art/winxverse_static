@@ -1,4 +1,4 @@
-import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon } from 'lucide-react';
+import { ArrowRightIcon, PlayIcon } from 'lucide-react';
 import { PrimaryButton, GhostButton } from './Buttons';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';

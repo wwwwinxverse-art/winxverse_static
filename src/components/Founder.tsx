@@ -1,8 +1,6 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+
 
 export default function Founder() {
-const [hovered, setHovered] = useState(false);
   return (
      <section
       style={{
