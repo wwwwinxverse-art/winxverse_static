@@ -8,10 +8,7 @@ export default function ContactPage() {
 
         {/* ✅ CENTER HEADING */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Contact <span className="text-blue-400">Us</span>
-          </h2>
-
+       
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
             We’d love to hear from you. Whether you have a question, need a quote,
             or just want to say hello — feel free to reach out anytime.

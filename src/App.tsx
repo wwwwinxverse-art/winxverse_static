@@ -8,10 +8,10 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 // Pages
-import Home from './components/Home';
-import About from "./components/About";
-import Services from './components/Services';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import About from "./pages/About";
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 import WebDevelopmentBlog from './components/Blog/Blog1';
 import AIBlog from './components/Blog/Blog2';
 
