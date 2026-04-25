@@ -1,32 +1,42 @@
 import { footerLinks } from '../assets/dummy-data';
 import { motion } from 'framer-motion';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <motion.footer
-      className="bg-white/6 border-t border-white/6 pt-10 text-gray-300"
+      className="relative bg-white/6 border-t border-white/10 pt-10 text-gray-300 overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ type: "spring", duration: 0.5 }}
     >
+
+      {/* 🤖 Floating Robot */}
+      <div className="hidden md:block pointer-events-none absolute right-6 bottom-10">
+        <img
+          src="/images/robo.gif"
+          alt="robot"
+          className="w-[120px] opacity-80"
+          style={{ animation: "float 4s ease-in-out infinite" }}
+        />
+      </div>
+
       <div className="max-w-6xl mx-auto px-6">
 
         {/* TOP */}
-        <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-white/10">
+        <div className="grid md:grid-cols-3 gap-10 py-10 border-b border-white/10">
 
           {/* LEFT SIDE */}
           <div>
-            <img src='/images/logo_with_name.png' alt="logo" className="h-24" />
+            <img src='/images/logo_with_name.png' alt="logo" className="h-20" />
             <p className="max-w-[410px] mt-6 text-sm leading-relaxed">
               We are a digital agency focused on strategy, design and development—helping brands build meaningful digital experiences and grow sustainably.
             </p>
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="grid grid-cols-2 gap-10 w-full md:w-[45%] items-start">
-
-            {/* QUICK LINKS */}
+          {/* QUICK LINKS + LEGAL */}
+          <div className="grid grid-cols-2 gap-10">
             <div>
               <h3 className="font-semibold text-white mb-4">Quick Links</h3>
               <ul className="text-sm space-y-2">
@@ -40,7 +50,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* LEGAL */}
             <div>
               <h3 className="font-semibold text-white mb-4">Legal</h3>
               <ul className="text-sm space-y-2">
@@ -53,16 +62,33 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
-            <img
-              src="/images/robo.gif" // 👉 your image
-              alt="footer"
-              className="h-34"
-            />
+          {/* CONTACT DETAILS */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Contact</h3>
+
+            <ul className="text-sm space-y-3">
+              <li>📍 Madurai, Tamil Nadu, India</li>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ info@winxverse.com</li>
+            </ul>
+
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-4 mt-6">
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
+                <FaFacebookF />
+              </a>
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
+                <FaTwitter />
+              </a>
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
+                <FaInstagram />
+              </a>
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
 
         </div>
@@ -70,13 +96,11 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 gap-2">
 
-          {/* LEFT */}
           <p>
             © {new Date().getFullYear()} • Distributed by{" "}
-            <a href="#" className="text-white">Winxverse</a>. All rights reserved.
+            <span className="text-white">Winxverse</span>. All rights reserved.
           </p>
 
-          {/* RIGHT */}
           <p className="flex items-center gap-1">
             Made <span className="text-red-500">❤️</span> by{" "}
             <span className="text-white font-semibold">WXV</span>
@@ -85,6 +109,18 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* ✨ Floating Animation Style */}
+      <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+          }
+        `}
+      </style>
+
     </motion.footer>
   );
 }

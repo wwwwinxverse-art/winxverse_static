@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import HomeBlog from "../HomeBlog";
 
 export default function WebDevelopmentBlog() {
   return (
@@ -201,6 +202,14 @@ export default function WebDevelopmentBlog() {
               Contact Us
             </button>
           </div>
+
+
+       
+
+        </div>
+
+        <div className="mt-10">
+            <HomeBlog />
 
         </div>
       </section>

@@ -22,7 +22,7 @@ export default function ServiceContent() {
         "UI/UX focused apps",
         "API integrations"
       ],
-      img: "/serviceimage/app.avif"
+      img: "/serviceimage/app.jpg"
     },
     {
       id: 3,

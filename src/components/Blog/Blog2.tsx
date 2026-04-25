@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import HomeBlog from "../HomeBlog";
 
 export default function AIBlog() {
   const navigate = useNavigate();
@@ -200,7 +201,13 @@ export default function AIBlog() {
             </button>
           </div>
 
+       
+
         </div>
+              <div className="mt-10">
+                        <HomeBlog />
+            
+                    </div>
       </section>
     </div>
   );

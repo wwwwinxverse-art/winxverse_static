@@ -66,16 +66,17 @@ export default function Founder() {
               border: "4px solid rgba(34,197,94,0.5)",
             }}
           >
-            <img
-              src="/images/profile.jpeg"
-              alt="Founder"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
-            />
+         <img
+  src="/images/mahesh.jpeg"
+  alt="Founder"
+  style={{
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",   // 👈 shows full image (zoomed out)
+    objectPosition: "center",
+    backgroundColor: "white", // 👈 fills empty space nicely
+  }}
+/>
           </div>
         </div>
 
