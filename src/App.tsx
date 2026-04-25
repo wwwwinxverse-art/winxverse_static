@@ -8,10 +8,10 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 // Pages
-import Home from './pages/Home';
-import About from "./pages/About";
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+import Home from './components/Home';
+import About from "./components/About";
+import Services from './components/Services';
+import Contact from './components/Contact';
 import WebDevelopmentBlog from './components/Blog/Blog1';
 import AIBlog from './components/Blog/Blog2';
 
@@ -32,26 +32,15 @@ function App() {
       {/* BACKGROUND + SMOOTH SCROLL */}
       <SoftBackdrop />
       <LenisScroll />
-
-      {/* NAVBAR */}
       <Navbar />
-
-      {/* ✅ SCROLL FIX */}
       <ScrollToTop />
-
-      {/* ✅ ROUTES ONLY */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-
-        {/* BLOG */}
         <Route path="/webdevelopment" element={<WebDevelopmentBlog />} />
         <Route path="/artificial-intelligence-future" element={<AIBlog />} />
-
-        {/* OPTIONAL: 404 PAGE */}
-        <Route path="*" element={<div className="text-white text-center py-20">Page Not Found</div>} />
       </Routes>
 
       {/* FLOAT BUTTON */}

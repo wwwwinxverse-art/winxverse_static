@@ -1,8 +1,8 @@
-import AboutContent from "../components/AboutUs/AboutContent";
-import AboutFounder from "../components/AboutUs/AboutFounder";
-import AboutHeader from "../components/AboutUs/AboutHeader";
+import AboutContent from "./AboutUs/AboutContent";
+import AboutFounder from "./AboutUs/AboutFounder";
+import AboutHeader from "./AboutUs/AboutHeader";
 // import OurTeam from "../components/AboutUs/OurTeam";
-import WhyChooseUs from "../components/AboutUs/WhyChooseUs";
+import WhyChooseUs from "./AboutUs/WhyChooseUs";
 
 const About = () => {
   return (
