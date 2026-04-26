@@ -1,5 +1,6 @@
 import { footerLinks } from '../assets/dummy-data';
 import { motion } from 'framer-motion';
+import { MapPin, Phone, Mail } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
@@ -68,12 +69,26 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Contact</h3>
 
-            <ul className="text-sm space-y-3">
-              <li>📍 Madurai, Tamil Nadu, India</li>
-              <li>📞 +91 98765 43210</li>
-              <li>✉️ info@winxverse.com</li>
-            </ul>
+           <ul className="text-sm space-y-3">
+  <li className="flex items-center gap-2">
+    <MapPin size={16} />
+    <span>Viruthunagar, Tamil Nadu, India - 626149</span>
+  </li>
 
+  <li className="flex items-center gap-2">
+    <Phone size={16} />
+    <a href="tel:+916380623206" className="hover:underline">
+      +91 63806 23206
+    </a>
+  </li>
+
+  <li className="flex items-center gap-2">
+    <Mail size={16} />
+    <a href="mailto:www.winxverse@gmail.com" className="hover:underline">
+      www.winxverse@gmail.com
+    </a>
+  </li>
+</ul>
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-6">
               <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
