@@ -118,7 +118,7 @@ const AboutFounder = () => {
             }}
           >
            <img
-  src="/images/mahesh.jpeg"
+  src="/images/mahesh.png"
   alt="Founder"
   style={{
     width: "100%",
@@ -131,84 +131,78 @@ const AboutFounder = () => {
           </div>
         </div>
 
-        {/* RIGHT CONTENT (2/3) */}
-        <div
-          style={{
-            flex: "2 1 600px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center", // center everything
-            textAlign: "center",
-          }}
-        >
-          {/* TITLE */}
-          <h2
-            style={{
-              fontSize: "2.6rem",
-              fontWeight: "800",
-              color: "#ffffff",
-              marginBottom: "22px",
-            }}
-          >
-            Our Vision –{" "}
-            <span
-              style={{
-                background: "linear-gradient(90deg, #22c55e, #4ade80)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Message
-            </span>
-            <br />
-            From Founder
-          </h2>
+    {/* RIGHT CONTENT (2/3) */}
+<div
+  style={{
+    flex: "2 1 600px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+  }}
+>
+  {/* TITLE */}
+  <h2
+    style={{
+      fontSize: "2.6rem",
+      fontWeight: "800",
+      color: "#ffffff",
+      marginBottom: "22px",
+    }}
+  >
+    Our Mission –{" "}
+    <span
+      style={{
+        background: "linear-gradient(90deg, #22c55e, #4ade80)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }}
+    >
+      Commitment
+    </span>
+    <br />
+    To Excellence
+  </h2>
 
-          {/* TEXT BLOCK */}
-          <div style={{ maxWidth: "750px" }}>
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.72)",
-                lineHeight: "1.85",
-                marginBottom: "18px",
-                textAlign: "justify",
-              }}
-            >
-              At <strong style={{ color: "#ffffff" }}>PIXEL</strong>, we aim to drive
-              innovation by blending technology with user insights, creating impactful
-              solutions that foster growth and elevate brands.
-            </p>
+  {/* TEXT BLOCK */}
+  <div style={{ maxWidth: "750px" }}>
+    <p
+      style={{
+        fontSize: "1.05rem",
+        color: "rgba(255,255,255,0.72)",
+        lineHeight: "1.85",
+        marginBottom: "18px",
+        textAlign: "justify",
+      }}
+    >
+      At <strong style={{ color: "#ffffff" }}>WinXverse Technologies</strong>, our mission is to deliver high-quality, scalable, and innovative digital solutions that empower businesses to grow and succeed in a competitive digital world.
+    </p>
 
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: "1.85",
-                marginBottom: "18px",
-                textAlign: "justify",
-              }}
-            >
-              We believe that great design is the intersection of art and engineering.
-              Every pixel we craft is intentional and meaningful.
-            </p>
+    <p
+      style={{
+        fontSize: "1.05rem",
+        color: "rgba(255,255,255,0.55)",
+        lineHeight: "1.85",
+        marginBottom: "18px",
+        textAlign: "justify",
+      }}
+    >
+      We are committed to understanding our clients’ needs and transforming their ideas into reliable, efficient, and user-focused technologies that create real value.
+    </p>
 
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.48)",
-                lineHeight: "1.85",
-                marginBottom: "30px",
-                textAlign: "justify",
-              }}
-            >
-              We are committed to continuous growth, innovation, and delivering
-              excellence in every project.
-            </p>
-          </div>
-
-         
-        </div>
+    <p
+      style={{
+        fontSize: "1.05rem",
+        color: "rgba(255,255,255,0.48)",
+        lineHeight: "1.85",
+        marginBottom: "30px",
+        textAlign: "justify",
+      }}
+    >
+      Through continuous innovation, strong teamwork, and a focus on excellence, we aim to deliver solutions that not only meet expectations but exceed them.
+    </p>
+  </div>
+</div>
       </div>
 
       <style>{`

@@ -67,7 +67,7 @@ export default function Founder() {
             }}
           >
          <img
-  src="/images/mahesh.jpeg"
+  src="/images/mahesh.png"
   alt="Founder"
   style={{
     width: "100%",
@@ -115,45 +115,41 @@ export default function Founder() {
 
           {/* TEXT BLOCK */}
           <div style={{ maxWidth: "750px" }}>
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.72)",
-                lineHeight: "1.85",
-                marginBottom: "18px",
-                textAlign: "justify",
-              }}
-            >
-              At <strong style={{ color: "#ffffff" }}>PIXEL</strong>, we aim to drive
-              innovation by blending technology with user insights, creating impactful
-              solutions that foster growth and elevate brands.
-            </p>
+           <p
+  style={{
+    fontSize: "1.05rem",
+    color: "rgba(255,255,255,0.72)",
+    lineHeight: "1.85",
+    marginBottom: "18px",
+    textAlign: "justify",
+  }}
+>
+  At <strong style={{ color: "#ffffff" }}>WinXverse Technologies</strong>, our vision is to empower businesses through innovative, scalable, and future-ready digital solutions. We strive to transform ideas into impactful technologies that drive growth, efficiency, and long-term success.
+</p>
 
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: "1.85",
-                marginBottom: "18px",
-                textAlign: "justify",
-              }}
-            >
-              We believe that great design is the intersection of art and engineering.
-              Every pixel we craft is intentional and meaningful.
-            </p>
+<p
+  style={{
+    fontSize: "1.05rem",
+    color: "rgba(255,255,255,0.55)",
+    lineHeight: "1.85",
+    marginBottom: "18px",
+    textAlign: "justify",
+  }}
+>
+  We believe technology is more than just code—it is a powerful tool to solve real-world problems. By combining creativity, precision, and strategic thinking, we build solutions that are not only functional but meaningful and sustainable.
+</p>
 
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "rgba(255,255,255,0.48)",
-                lineHeight: "1.85",
-                marginBottom: "30px",
-                textAlign: "justify",
-              }}
-            >
-              We are committed to continuous growth, innovation, and delivering
-              excellence in every project.
-            </p>
+<p
+  style={{
+    fontSize: "1.05rem",
+    color: "rgba(255,255,255,0.48)",
+    lineHeight: "1.85",
+    marginBottom: "30px",
+    textAlign: "justify",
+  }}
+>
+  Our commitment is to continuous innovation, strong collaboration, and delivering excellence in every project we undertake—ensuring our clients stay ahead in an ever-evolving digital world.
+</p>
           </div>
 
          
