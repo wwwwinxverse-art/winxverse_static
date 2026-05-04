@@ -124,12 +124,16 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Legal",
-    links: [
-      { name: "Terms & Conditions", url: "/terms" },
-      { name: "Privacy Policy", url: "/privacy" },
-    ],
-  },
+  title: "Legal",
+  links: [
+    { name: "Terms & Conditions", url: "/terms" },
+    { name: "Privacy Policy", url: "/privacy" },
+    { name: "Payment Policy", url: "/payment" },
+    { name: "Cancellation & Refund Policy", url: "/cancelrefund" },
+    { name: "Shipping Policy", url: "/shipping" },
+    { name: "Disclaimer", url: "/desclaimer" }
+  ],
+},
   {
     title: "Follow Us",
     links: [

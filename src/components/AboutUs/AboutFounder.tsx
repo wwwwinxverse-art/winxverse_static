@@ -27,9 +27,9 @@ const AboutFounder = () => {
         }}
       >
         {[
-          { number: "500+", label: "Projects Completed" },
-          { number: "600+", label: "Happy Clients" },
-          { number: "7+", label: "Industry Awards" },
+          { number: "9+", label: "Projects Completed" },
+          { number: "12+", label: "Happy Clients" },
+          { number: "12+", label: "Best Employees" },
         ].map((stat, i) => (
           <div
             key={i}

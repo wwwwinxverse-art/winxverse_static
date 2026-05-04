@@ -11,9 +11,9 @@ export default function Navbar() {
     { name: 'Home', to: '/', type: 'route' },
     { name: 'About', to: '/aboutus', type: 'route' },
     { name: 'Services', to: '/services', type: 'route' },
-    { name: 'Features', to: '/#features', type: 'hash' },
+    { name: 'Features', to: '/feature', type: 'Route' },
     { name: 'Contact', to: '/contact', type: 'route' },
-    { name: 'Blog', to: '/webdevelopment', type: 'route' },
+    { name: 'Blog', to: '/#homeblog', type: 'hash' },
     { name: 'FAQ', to: '/#faq', type: 'hash' },
   ];
 
