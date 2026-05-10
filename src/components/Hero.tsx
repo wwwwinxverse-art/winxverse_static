@@ -1,5 +1,5 @@
 import { ArrowRightIcon, PlayIcon } from 'lucide-react';
-import { PrimaryButton, GhostButton } from './Buttons';
+import { PrimaryButton } from './Buttons';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 

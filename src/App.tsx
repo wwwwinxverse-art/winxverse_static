@@ -13,7 +13,6 @@ import About from "./pages/About";
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import WebDevelopmentBlog from './components/Blog/Blog1';
-import AIBlog from './components/Blog/Blog2';
 import Features from './pages/Features';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
