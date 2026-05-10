@@ -4,6 +4,7 @@ import Faq from "../components/Faq";
 import CTA from "../components/CTA";
 import Founder from "../components/Founder";
 import HomeBlog from "../components/HomeBlog";
+import Poster from "../components/Posters/Poster";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Founder/>
             <Features />
             <Faq />
+            <Poster />
             <CTA />
             <HomeBlog />
         </>

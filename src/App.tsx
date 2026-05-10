@@ -21,6 +21,11 @@ import Payment from './pages/Payment';
 import CancelRefund from './pages/CancelRefund';
 import Shipping from './pages/Shipping';
 import Desclaimer from './pages/Desclaimer';
+import AIBlogs from './components/Blog/Blog2';
+import CloudComputingBlog from './components/Blog/Blog3';
+import StartupGrowthBlog from './components/Blog/Blog4';
+import SocialMediaMarketingBlog from './components/Blog/Blog5';
+import WebDesignBlogs from './components/Blog/Blog6';
 
 // ✅ SCROLL TO TOP COMPONENT
 function ScrollToTop() {
@@ -54,7 +59,11 @@ function App() {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/desclaimer" element={<Desclaimer />} />
         <Route path="/webdevelopment" element={<WebDevelopmentBlog />} />
-        <Route path="/artificial-intelligence-future" element={<AIBlog />} />
+        <Route path="/artificial-intelligence-future" element={<AIBlogs />} />
+        <Route path="/future-of-cloud-computing" element={<CloudComputingBlog />} />
+        <Route path="/startup-growth-strategies" element={<StartupGrowthBlog />} />
+        <Route path="/social-media-marketing" element={<SocialMediaMarketingBlog />} />
+        <Route path="/web-design-trends-2026" element={<WebDesignBlogs />} />
       </Routes>
 
       {/* FLOAT BUTTON */}

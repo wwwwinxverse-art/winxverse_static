@@ -30,38 +30,38 @@ const blogData: Blog[] = [
   title: "How Artificial Intelligence is Transforming Modern Businesses",
   desc: "Explore how AI technologies like machine learning, automation, and data analytics are revolutionizing business operations and driving digital growth."
 },
-  {
-    slug: "image-optimization",
-    image: "/images/service/cloud.jpg",
-    category: "Performance",
-    date: "Apr-12 2026",
-    title: "How to optimize images in WordPress",
-    desc: "Improve performance with smart image optimization.",
-  },
-  {
-    slug: "community-growth",
-    image: "/images/service/dm.jpg",
-    category: "Marketing",
-    date: "Apr-12 2026",
-    title: "How to build a loyal community online",
-    desc: "Engage your audience and grow your brand.",
-  },
-  {
-    slug: "ai-future",
-    image: "/images/service/gd.jpg",
-    category: "AI",
-    date: "Apr-10 2026",
-    title: "The future of AI in business",
-    desc: "Explore how AI is transforming industries.",
-  },
-  {
-    slug: "ui-trends-2026",
-    image: "/images/service/mobileapp.jpg",
-    category: "Design",
-    date: "Apr-08 2026",
-    title: "Modern UI trends in 2026",
-    desc: "Design trends shaping digital products.",
-  },
+ {
+  slug: "future-of-cloud-computing",
+  image: "/images/blog3/cloud1.jpg",
+  category: "Cloud Technology",
+  date: "May-08 2026",
+  title: "The Future of Cloud Computing and Scalable Business Solutions",
+  desc: "Learn how cloud technologies are helping businesses scale faster with security and flexibility."
+},
+{
+  slug: "startup-growth-strategies",
+  image: "/images/blog4/startup.jpg",
+  category: "Business Growth",
+  date: "May-08 2026",
+  title: "Best Startup Growth Strategies for Digital Businesses",
+  desc: "Explore smart strategies that help startups scale faster with technology, branding, and automation."
+},
+{
+  slug: "social-media-marketing",
+  image: "/images/blog5/sm1.jpg",
+  category: "Social Media",
+  date: "May-08 2026",
+  title: "Social Media Marketing Trends Every Brand Should Know",
+  desc: "Discover the latest social media marketing strategies for audience engagement and brand growth."
+},
+// {
+//   slug: "web-design-trends-2026",
+//   image: "/images/blog3/web-design.jpg",
+//   category: "Web Design",
+//   date: "May-08 2026",
+//   title: "Modern Web Design Trends Creating Better User Experiences",
+//   desc: "Explore the latest UI/UX design trends improving engagement, accessibility, and website performance."
+// },
 ];
 
 export default function HomeBlog() {

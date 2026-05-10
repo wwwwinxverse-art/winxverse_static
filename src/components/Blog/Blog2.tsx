@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import HomeBlog from "../HomeBlog";
 
-export default function AIBlog() {
+export default function AIBlogs() {
   const navigate = useNavigate();
 
   return (
