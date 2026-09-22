@@ -13,6 +13,15 @@ import StatsCounters from "../components/StatsCounters";
 import CTABanner from "../components/CTABanner";
 import OurApproach from "../components/OurApproach";
 import TechnologyExpertise from "../components/TechnologyExpertise";
+import OurSEOApproach from "../components/OurSEOApproach";
+import OurDigitalAdvantage from "../components/OurDigitalAdvantage";
+import IdeasIntoProducts from "../components/IdeasIntoProducts";
+import BusinessChallengesWeSolve from "../components/BusinessChallengesWeSolve";
+import MadeForYourBusiness from "../components/MadeForYourBusiness";
+import OurPlayground from "../components/OurPlayground";
+import OnePartnerMultipleSolutions from "../components/OnePartnerMultipleSolutions";
+import BehindEverySolution from "../components/BehindEverySolution";
+import ClientJourney from "../components/ClientJourney";
 
 export default function Home() {
     return (
@@ -27,6 +36,15 @@ export default function Home() {
             <ClientTestimonials />
             <StatsCounters />
             <TechnologyExpertise />
+            <OurSEOApproach />
+            <OurDigitalAdvantage />
+            <IdeasIntoProducts />
+            <BusinessChallengesWeSolve />
+            <MadeForYourBusiness />
+            <OurPlayground />
+            <OnePartnerMultipleSolutions />
+            <BehindEverySolution />
+            <ClientJourney />
             <Faq />
             <Poster />
             <CTA />

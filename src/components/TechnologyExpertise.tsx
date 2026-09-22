@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Layers,
   Component,
@@ -15,19 +16,17 @@ import {
   Braces,
   Code,
   Hexagon,
-  Boxes,
+  Zap,
   Container,
   Server,
   Globe,
-  Zap,
   GitBranch,
 } from "lucide-react";
 
 const technologies = [
-  { icon: Layers, name: ".NET MAUI", category: "Cross-Platform" },
   { icon: Component, name: "Angular", category: "Frontend" },
   { icon: Atom, name: "React", category: "Frontend" },
-  { icon: Boxes, name: "Vue.js", category: "Frontend" },
+  { icon: Layers, name: "Vue.js", category: "Frontend" },
   { icon: Triangle, name: "Next.js", category: "Frontend" },
   { icon: Braces, name: "TypeScript", category: "Language" },
   { icon: Code, name: "JavaScript", category: "Language" },
@@ -44,13 +43,32 @@ const technologies = [
   { icon: Container, name: "Docker", category: "DevOps" },
   { icon: GitBranch, name: "CI/CD", category: "DevOps" },
   { icon: Rocket, name: "Deployment", category: "DevOps" },
-  { icon: Github, name: "GitHub", category: "Version Control" },
+  { icon: Github, name: "GitHub", category: "DevOps" },
   { icon: Bot, name: "AI", category: "Intelligence" },
   { icon: Tablet, name: "React Native", category: "Mobile" },
-  { icon: Smartphone, name: "Mobile Development", category: "Mobile" },
+  { icon: Smartphone, name: ".NET MAUI", category: "Mobile" },
+];
+
+const categories = [
+  "All",
+  "Frontend",
+  "Backend",
+  "Database",
+  "Infrastructure",
+  "DevOps",
+  "Mobile",
+  "Language",
+  "Intelligence",
 ];
 
 export default function TechnologyExpertise() {
+  const [active, setActive] = useState("All");
+
+  const filtered =
+    active === "All"
+      ? technologies
+      : technologies.filter((t) => t.category === active);
+
   return (
     <section
       style={{
@@ -63,7 +81,7 @@ export default function TechnologyExpertise() {
     >
       <div
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1200px",
           margin: "0 auto",
           padding: "0 30px",
         }}
@@ -73,7 +91,7 @@ export default function TechnologyExpertise() {
           style={{
             textAlign: "center",
             maxWidth: "700px",
-            margin: "0 auto 56px auto",
+            margin: "0 auto 40px auto",
           }}
         >
           <span
@@ -123,37 +141,76 @@ export default function TechnologyExpertise() {
           </p>
         </div>
 
-        {/* TECH GRID */}
+        {/* CATEGORY FILTER */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "10px",
+            marginBottom: "44px",
+          }}
+        >
+          {categories.map((cat) => {
+            const isActive = cat === active;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className="filter-pill"
+                style={{
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  padding: "9px 20px",
+                  borderRadius: "999px",
+                  cursor: "pointer",
+                  border: isActive
+                    ? "1px solid rgba(56,189,248,0.6)"
+                    : "1px solid rgba(255,255,255,0.1)",
+                  background: isActive
+                    ? "linear-gradient(90deg, #0284c7, #38bdf8)"
+                    : "rgba(255,255,255,0.03)",
+                  color: isActive ? "#0a1420" : "rgba(255,255,255,0.6)",
+                  transition: "all 0.25s ease",
+                }}
+              >
+                {cat}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* TECH GRID — uniform, clean */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))",
-            gap: "20px",
+            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+            gap: "16px",
           }}
         >
-          {technologies.map((tech) => {
+          {filtered.map((tech) => {
             const Icon = tech.icon;
             return (
               <div
                 key={tech.name}
                 className="te-card"
                 style={{
-                  position: "relative",
                   display: "flex",
+                  flexDirection: "column",
                   alignItems: "center",
-                  gap: "16px",
+                  textAlign: "center",
+                  gap: "12px",
                   background: "rgba(255,255,255,0.03)",
                   border: "1px solid rgba(255,255,255,0.08)",
                   borderRadius: "14px",
-                  padding: "20px",
-                  transition: "all 0.3s ease",
+                  padding: "24px 14px",
+                  transition: "all 0.25s ease",
                 }}
               >
                 <div
                   style={{
-                    flex: "0 0 44px",
-                    width: "44px",
-                    height: "44px",
+                    width: "46px",
+                    height: "46px",
                     borderRadius: "12px",
                     display: "flex",
                     alignItems: "center",
@@ -166,28 +223,14 @@ export default function TechnologyExpertise() {
                   <Icon size={21} color="#38bdf8" strokeWidth={1.8} />
                 </div>
 
-                <div>
-                  <div
-                    style={{
-                      fontSize: "0.98rem",
-                      fontWeight: 700,
-                      color: "#ffffff",
-                      marginBottom: "3px",
-                    }}
-                  >
-                    {tech.name}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "0.76rem",
-                      fontWeight: 500,
-                      color: "rgba(255,255,255,0.45)",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.6px",
-                    }}
-                  >
-                    {tech.category}
-                  </div>
+                <div
+                  style={{
+                    fontSize: "0.92rem",
+                    fontWeight: 700,
+                    color: "#ffffff",
+                  }}
+                >
+                  {tech.name}
                 </div>
               </div>
             );
@@ -196,11 +239,14 @@ export default function TechnologyExpertise() {
       </div>
 
       <style>{`
+        .filter-pill:hover {
+          border-color: rgba(56,189,248,0.5);
+        }
         .te-card:hover {
           transform: translateY(-4px);
           border-color: rgba(56,189,248,0.4);
           background: rgba(255,255,255,0.05);
-          box-shadow: 0 10px 26px rgba(56,189,248,0.12);
+          box-shadow: 0 10px 24px rgba(56,189,248,0.12);
         }
       `}</style>
     </section>

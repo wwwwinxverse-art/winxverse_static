@@ -47,7 +47,7 @@ export default function FeaturesContent() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#0b0b1a] text-white">
+    <div className="bg-transparent text-white">
 
       {/* ================== 1. INTRO + FEATURES ================== */}
       <section className="py-20 px-4">

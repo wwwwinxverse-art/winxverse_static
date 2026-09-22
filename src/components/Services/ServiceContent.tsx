@@ -3,172 +3,185 @@ export default function ServiceContent() {
     {
       id: 1,
       title: "Web Development",
-      desc: "We build modern, scalable, and high-performance websites for startups and enterprises.",
+      desc: "We design and build fast, scalable websites that don't just look good — they're engineered to convert visitors into customers and hold up as your business grows. From marketing sites to complex web platforms, every line of code is written with performance and long-term maintainability in mind.",
       points: [
         "Custom business websites",
         "E-commerce platforms",
         "Responsive UI/UX design",
-        "SEO optimized architecture"
+        "SEO optimized architecture",
+        "Performance-first development",
+        "CMS integration",
       ],
-      img: "/serviceimage/web.jpg"
+      img: "/serviceimage/web.jpg",
+      color: "#38bdf8",
     },
     {
       id: 2,
       title: "Mobile App Development",
-      desc: "Create powerful Android and iOS mobile applications with seamless performance.",
+      desc: "We create native and cross-platform apps that feel fast, intuitive, and genuinely useful — not just a shrunk-down website. From the first wireframe to the App Store listing, we handle the full lifecycle so your app is ready for real users, not just a demo.",
       points: [
         "Android & iOS apps",
         "Cross-platform solutions",
         "UI/UX focused apps",
-        "API integrations"
+        "API integrations",
+        "Push notifications & offline support",
+        "App Store & Play Store deployment",
       ],
-      img: "/serviceimage/app.jpg"
+      img: "/serviceimage/app.jpg",
+      color: "#a78bfa",
     },
     {
       id: 3,
       title: "Cloud Solutions",
-      desc: "Secure and scalable cloud infrastructure for modern digital businesses.",
+      desc: "Your infrastructure shouldn't be the reason your product goes down. We design cloud architectures that scale automatically, recover from failure on their own, and keep your costs predictable instead of surprising you at the end of the month.",
       points: [
         "AWS & Azure deployment",
         "Cloud migration",
         "Server management",
-        "Scalable architecture"
+        "Scalable architecture",
+        "Auto-scaling & load balancing",
+        "Cost optimization",
       ],
-      img: "/serviceimage/cloud.jpg"
+      img: "/serviceimage/cloud.jpg",
+      color: "#22d3ee",
     },
     {
       id: 4,
       title: "Digital Marketing",
-      desc: "Grow your business online using powerful digital marketing strategies.",
+      desc: "Traffic without strategy is just noise. We build marketing programs rooted in real data — the keywords your customers search, the ads that actually convert, and the content that keeps them coming back — so growth is measurable, not a guess.",
       points: [
         "Search Engine Optimization",
         "Social Media Marketing",
         "Google Ads campaigns",
-        "Brand growth strategies"
+        "Brand growth strategies",
+        "Content strategy & copywriting",
+        "Analytics & reporting",
       ],
-      img: "/serviceimage/digi.avif"
+      img: "/serviceimage/digi.avif",
+      color: "#f472b6",
     },
     {
-  id: 5,
-  title: "Software Development",
-  desc: "Build scalable and high-performance software solutions tailored to your business needs.",
-  points: [
-    "Web application development",
-    "Mobile app development",
-    "Custom software solutions",
-    "API & backend development"
-  ],
-  img: "/serviceimage/softwaredevelop.jpg"
-},
-{
-  id: 6,
-  title: "Graphic Designing",
-  desc: "Create visually stunning designs that elevate your brand identity and engagement.",
-  points: [
-    "Logo & brand identity design",
-    "Social media creatives",
-    "UI/UX design",
-    "Marketing & promotional materials"
-  ],
-  img: "/serviceimage/graphic.jpg"
-},
+      id: 5,
+      title: "Software Development",
+      desc: "Beyond websites and apps, we build the custom software that runs the operational side of your business — internal tools, dashboards, and systems built around your exact workflow instead of forcing you to adapt to someone else's.",
+      points: [
+        "Web application development",
+        "Mobile app development",
+        "Custom software solutions",
+        "API & backend development",
+        "Database design",
+        "Third-party integrations",
+      ],
+      img: "/serviceimage/softwaredevelop.jpg",
+      color: "#fbbf24",
+    },
+    {
+      id: 6,
+      title: "Graphic Designing",
+      desc: "Good design does more than look nice — it builds trust the moment someone sees it. We create a consistent visual identity across everything your business puts out, so your brand looks like one company everywhere it shows up.",
+      points: [
+        "Logo & brand identity design",
+        "Social media creatives",
+        "UI/UX design",
+        "Marketing & promotional materials",
+        "Brand guidelines",
+        "Print & packaging design",
+      ],
+      img: "/serviceimage/graphic.jpg",
+      color: "#fb7185",
+    },
     {
       id: 7,
       title: "AI & Automation Solutions",
-      desc: "Improve business efficiency using AI-powered tools and automation workflows.",
+      desc: "The most valuable hours on your team are the ones spent on work only a human can do. We build AI tools and automated workflows that take the repetitive tasks off their plate — quietly and reliably, in the background.",
       points: [
         "AI chatbots",
         "Process automation",
         "Data analytics",
-        "Smart integrations"
+        "Smart integrations",
+        "Custom AI model integration",
+        "Workflow orchestration",
       ],
-      img: "/serviceimage/ai.jpg"
-    }
+      img: "/serviceimage/ai.jpg",
+      color: "#10b981",
+    },
   ];
 
   return (
     <section className="bg-transparent py-20 px-6 md:px-16">
+      {/* Title */}
+      <div className="text-center mb-16 max-w-2xl mx-auto">
+        <span className="inline-block text-xs font-semibold tracking-widest uppercase text-sky-400 mb-3">
+          What We Offer
+        </span>
 
-  {/* Title */}
-  <div className="text-center mb-14">
-    <p className="text-sm text-blue-400 font-medium flex items-center justify-center gap-2">
-      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-      Our Services
-    </p>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+          Professional Software Services
+        </h2>
 
-    <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-white">
-      Professional Software Services
-    </h2>
-
-    <p className="text-gray-300 mt-2 text-sm">
-      We deliver complete digital solutions for modern businesses
-    </p>
-  </div>
-
-  {/* Service Grid */}
-  <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-
-    {services.slice(0,6).map((service) => (
-      <div
-        key={service.id}
-        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl 
-        shadow-[0_0_20px_rgba(255,255,255,0.08)] overflow-hidden 
-        hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition"
-      >
-        <img
-          src={service.img}
-          alt={service.title}
-          className="w-full h-44 object-cover"
-        />
-
-        <div className="p-6">
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {service.id}. {service.title}
-          </h3>
-
-          <p className="text-sm text-gray-300 mb-4">
-            {service.desc}
-          </p>
-
-          <ul className="text-sm text-gray-300 space-y-1">
-            {service.points.map((point, i) => (
-              <li key={i}>• {point}</li>
-            ))}
-          </ul>
-        </div>
+        <p className="text-gray-400 text-base leading-relaxed">
+          We deliver complete digital solutions for modern businesses — from
+          the first line of code to the systems that keep it running.
+        </p>
       </div>
-    ))}
 
-  </div>
+      {/* Alternating editorial rows — no cards */}
+      <div className="max-w-6xl mx-auto">
+        {services.map((service, index) => {
+          const reversed = index % 2 === 1;
+          return (
+            <div
+              key={service.id}
+              className={`flex flex-col md:items-center gap-10 md:gap-16 py-14 md:py-16 border-b border-white/10 last:border-0 ${
+                reversed ? "md:flex-row-reverse" : "md:flex-row"
+              }`}
+            >
+              {/* image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-64 md:h-80 object-cover rounded-2xl border border-white/10"
+                />
+              </div>
 
-  {/* Last Full Width Card */}
-  <div className="max-w-7xl mx-auto mt-10 bg-white/10 backdrop-blur-md 
-  border border-white/20 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.08)] overflow-hidden">
+              {/* content */}
+              <div className="w-full md:w-1/2">
+                <span
+                  className="block font-serif leading-none text-6xl md:text-7xl mb-2"
+                  style={{ color: `${service.color}22` }}
+                >
+                  {String(service.id).padStart(2, "0")}
+                </span>
 
-    <img
-      src={services[6].img}
-      alt={services[6].title}
-      className="w-full h-52 object-cover"
-    />
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  {service.title}
+                </h3>
 
-    <div className="p-8">
-      <h3 className="text-lg font-semibold text-white mb-3">
-        5. {services[6].title}
-      </h3>
+                <p className="text-gray-300 text-[0.95rem] leading-relaxed mb-6">
+                  {service.desc}
+                </p>
 
-      <p className="text-sm text-gray-300 mb-4">
-        {services[6].desc}
-      </p>
-
-      <ul className="text-sm text-gray-300 space-y-1">
-        {services[6].points.map((point, i) => (
-          <li key={i}>• {point}</li>
-        ))}
-      </ul>
-    </div>
-
-  </div>
-
-</section>
+                <div className="flex flex-wrap gap-2">
+                  {service.points.map((point, i) => (
+                    <span
+                      key={i}
+                      className="text-xs font-medium rounded-full px-3 py-1.5 border"
+                      style={{
+                        color: service.color,
+                        borderColor: `${service.color}4D`,
+                        backgroundColor: `${service.color}14`,
+                      }}
+                    >
+                      {point}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
