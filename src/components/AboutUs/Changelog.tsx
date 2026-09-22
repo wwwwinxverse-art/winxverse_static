@@ -1,45 +1,110 @@
-import { Sparkles, Wrench, Bug, Zap } from "lucide-react";
+import { Sparkles, Bug, Zap } from "lucide-react";
 
-const typeStyles = {
-  New: { icon: Sparkles, color: "#e879f9", bg: "rgba(232,121,249,0.12)" },
-  Improved: { icon: Zap, color: "#c084fc", bg: "rgba(192,132,252,0.12)" },
-  Fixed: { icon: Bug, color: "#f0abfc", bg: "rgba(240,171,252,0.12)" },
+type ChangeType = "New" | "Improved" | "Fixed";
+
+interface Change {
+  type: ChangeType;
+  text: string;
+}
+
+interface Release {
+  version: string;
+  date: string;
+  changes: Change[];
+}
+
+const typeStyles: Record<
+  ChangeType,
+  {
+    icon: typeof Sparkles;
+    color: string;
+    bg: string;
+  }
+> = {
+  New: {
+    icon: Sparkles,
+    color: "#e879f9",
+    bg: "rgba(232,121,249,0.12)",
+  },
+  Improved: {
+    icon: Zap,
+    color: "#c084fc",
+    bg: "rgba(192,132,252,0.12)",
+  },
+  Fixed: {
+    icon: Bug,
+    color: "#f0abfc",
+    bg: "rgba(240,171,252,0.12)",
+  },
 };
 
-const releases = [
+const releases: Release[] = [
   {
     version: "v3.4.0",
     date: "September 2026",
     changes: [
-      { type: "New", text: "Introduced real-time collaboration for dashboard editing." },
-      { type: "New", text: "Added dark mode support across all client portals." },
-      { type: "Improved", text: "Reduced page load times by 35% on the analytics view." },
+      {
+        type: "New",
+        text: "Introduced real-time collaboration for dashboard editing.",
+      },
+      {
+        type: "New",
+        text: "Added dark mode support across all client portals.",
+      },
+      {
+        type: "Improved",
+        text: "Reduced page load times by 35% on the analytics view.",
+      },
     ],
   },
   {
     version: "v3.3.0",
     date: "July 2026",
     changes: [
-      { type: "New", text: "Launched mobile app support for iOS and Android." },
-      { type: "Fixed", text: "Resolved sync delay issue in the notifications panel." },
-      { type: "Improved", text: "Upgraded search to support fuzzy matching." },
+      {
+        type: "New",
+        text: "Launched mobile app support for iOS and Android.",
+      },
+      {
+        type: "Fixed",
+        text: "Resolved sync delay issue in the notifications panel.",
+      },
+      {
+        type: "Improved",
+        text: "Upgraded search to support fuzzy matching.",
+      },
     ],
   },
   {
     version: "v3.2.1",
     date: "May 2026",
     changes: [
-      { type: "Fixed", text: "Patched a rare crash when exporting large reports." },
-      { type: "Improved", text: "Better error messages across the API layer." },
+      {
+        type: "Fixed",
+        text: "Patched a rare crash when exporting large reports.",
+      },
+      {
+        type: "Improved",
+        text: "Better error messages across the API layer.",
+      },
     ],
   },
   {
     version: "v3.2.0",
     date: "March 2026",
     changes: [
-      { type: "New", text: "Rolled out role-based access control for teams." },
-      { type: "New", text: "Added integrations with Slack and Google Workspace." },
-      { type: "Improved", text: "Redesigned onboarding flow for new users." },
+      {
+        type: "New",
+        text: "Rolled out role-based access control for teams.",
+      },
+      {
+        type: "New",
+        text: "Added integrations with Slack and Google Workspace.",
+      },
+      {
+        type: "Improved",
+        text: "Redesigned onboarding flow for new users.",
+      },
     ],
   },
 ];
@@ -62,7 +127,7 @@ export default function Changelog() {
           padding: "0 30px",
         }}
       >
-        {/* HEADER — centered */}
+        {/* HEADER */}
         <div
           style={{
             textAlign: "center",
@@ -133,14 +198,15 @@ export default function Changelog() {
 
           {releases.map((release, index) => (
             <div
-              key={index}
+              key={release.version}
               style={{
                 position: "relative",
                 paddingLeft: "40px",
-                marginBottom: index !== releases.length - 1 ? "44px" : 0,
+                marginBottom:
+                  index !== releases.length - 1 ? "44px" : 0,
               }}
             >
-              {/* node dot */}
+              {/* NODE DOT */}
               <div
                 style={{
                   position: "absolute",
@@ -155,7 +221,7 @@ export default function Changelog() {
                 }}
               />
 
-              {/* version header */}
+              {/* VERSION HEADER */}
               <div
                 style={{
                   display: "flex",
@@ -175,6 +241,7 @@ export default function Changelog() {
                 >
                   {release.version}
                 </h3>
+
                 <span
                   style={{
                     fontSize: "0.85rem",
@@ -185,7 +252,7 @@ export default function Changelog() {
                 </span>
               </div>
 
-              {/* changes card */}
+              {/* CHANGES CARD */}
               <div
                 style={{
                   background: "rgba(255,255,255,0.03)",
@@ -198,9 +265,10 @@ export default function Changelog() {
                 {release.changes.map((change, i) => {
                   const style = typeStyles[change.type];
                   const Icon = style.icon;
+
                   return (
                     <div
-                      key={i}
+                      key={`${change.type}-${i}`}
                       style={{
                         display: "flex",
                         alignItems: "flex-start",
@@ -230,6 +298,7 @@ export default function Changelog() {
                         <Icon size={11} />
                         {change.type}
                       </span>
+
                       <p
                         style={{
                           fontSize: "0.92rem",

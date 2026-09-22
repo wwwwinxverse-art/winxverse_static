@@ -1,19 +1,54 @@
 import { Check, X, Minus } from "lucide-react";
 
+type CellValue = boolean | "partial";
+
+interface ComparisonRow {
+  feature: string;
+  values: CellValue[];
+}
+
 const columns = ["Feature", "WinXverse", "Agency A", "Agency B"];
 
-const rows = [
-  { feature: "Dedicated project manager", values: [true, false, true] },
-  { feature: "Fixed timelines & milestones", values: [true, "partial", false] },
-  { feature: "Transparent pricing", values: [true, false, "partial"] },
-  { feature: "Post-launch support included", values: [true, false, false] },
-  { feature: "Custom-built solutions", values: [true, true, "partial"] },
-  { feature: "24/7 client communication", values: [true, false, false] },
-  { feature: "Source code ownership", values: [true, "partial", true] },
-  { feature: "Scalable team on demand", values: [true, false, "partial"] },
+const rows: ComparisonRow[] = [
+  {
+    feature: "Dedicated project manager",
+    values: [true, false, true],
+  },
+  {
+    feature: "Fixed timelines & milestones",
+    values: [true, "partial", false],
+  },
+  {
+    feature: "Transparent pricing",
+    values: [true, false, "partial"],
+  },
+  {
+    feature: "Post-launch support included",
+    values: [true, false, false],
+  },
+  {
+    feature: "Custom-built solutions",
+    values: [true, true, "partial"],
+  },
+  {
+    feature: "24/7 client communication",
+    values: [true, false, false],
+  },
+  {
+    feature: "Source code ownership",
+    values: [true, "partial", true],
+  },
+  {
+    feature: "Scalable team on demand",
+    values: [true, false, "partial"],
+  },
 ];
 
-function Cell({ value }) {
+interface CellProps {
+  value: CellValue;
+}
+
+function Cell({ value }: CellProps) {
   if (value === true) {
     return (
       <div
@@ -27,6 +62,7 @@ function Cell({ value }) {
       </div>
     );
   }
+
   if (value === "partial") {
     return (
       <div
@@ -36,10 +72,15 @@ function Cell({ value }) {
           justifyContent: "center",
         }}
       >
-        <Minus size={18} color="rgba(255,255,255,0.35)" strokeWidth={2.5} />
+        <Minus
+          size={18}
+          color="rgba(255,255,255,0.35)"
+          strokeWidth={2.5}
+        />
       </div>
     );
   }
+
   return (
     <div
       style={{
@@ -48,7 +89,11 @@ function Cell({ value }) {
         justifyContent: "center",
       }}
     >
-      <X size={18} color="rgba(255,255,255,0.25)" strokeWidth={2.5} />
+      <X
+        size={18}
+        color="rgba(255,255,255,0.25)"
+        strokeWidth={2.5}
+      />
     </div>
   );
 }
@@ -71,7 +116,7 @@ export default function ComparisonTable() {
           padding: "0 30px",
         }}
       >
-        {/* HEADER — centered */}
+        {/* HEADER */}
         <div
           style={{
             textAlign: "center",
@@ -98,7 +143,7 @@ export default function ComparisonTable() {
               fontSize: "2.6rem",
               fontWeight: 800,
               color: "#ffffff",
-              marginBottom: "16px",
+              margin: "0 0 16px",
               lineHeight: 1.2,
             }}
           >
@@ -119,10 +164,11 @@ export default function ComparisonTable() {
               fontSize: "1.05rem",
               color: "rgba(255,255,255,0.6)",
               lineHeight: 1.8,
+              margin: 0,
             }}
           >
-            See how WinXverse stacks up against typical agencies on the things
-            that actually matter.
+            See how WinXverse stacks up against typical agencies on the
+            things that actually matter.
           </p>
         </div>
 
@@ -146,6 +192,7 @@ export default function ComparisonTable() {
               <tr>
                 {columns.map((col, i) => {
                   const isUs = i === 1;
+
                   return (
                     <th
                       key={col}
@@ -154,11 +201,14 @@ export default function ComparisonTable() {
                         padding: "20px 18px",
                         fontSize: "0.95rem",
                         fontWeight: 700,
-                        color: isUs ? "#0f1a08" : "rgba(255,255,255,0.75)",
+                        color: isUs
+                          ? "#0f1a08"
+                          : "rgba(255,255,255,0.75)",
                         background: isUs
                           ? "linear-gradient(90deg, #84cc16, #a3e635)"
                           : "rgba(255,255,255,0.03)",
-                        borderBottom: "1px solid rgba(255,255,255,0.08)",
+                        borderBottom:
+                          "1px solid rgba(255,255,255,0.08)",
                       }}
                     >
                       {col}
@@ -167,9 +217,11 @@ export default function ComparisonTable() {
                 })}
               </tr>
             </thead>
+
             <tbody>
               {rows.map((row, rIndex) => (
-                <tr key={rIndex}>
+                <tr key={row.feature}>
+                  {/* Feature */}
                   <td
                     style={{
                       padding: "18px",
@@ -184,11 +236,14 @@ export default function ComparisonTable() {
                   >
                     {row.feature}
                   </td>
+
+                  {/* Values */}
                   {row.values.map((val, cIndex) => {
                     const isUs = cIndex === 0;
+
                     return (
                       <td
-                        key={cIndex}
+                        key={`${row.feature}-${cIndex}`}
                         style={{
                           padding: "18px",
                           background: isUs
@@ -216,7 +271,7 @@ export default function ComparisonTable() {
           </table>
         </div>
 
-        {/* Legend */}
+        {/* LEGEND */}
         <div
           style={{
             display: "flex",
@@ -226,35 +281,87 @@ export default function ComparisonTable() {
             flexWrap: "wrap",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          {/* Fully included */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
             <Check size={16} color="#a3e635" strokeWidth={2.5} />
-            <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)" }}>
+
+            <span
+              style={{
+                fontSize: "0.85rem",
+                color: "rgba(255,255,255,0.55)",
+              }}
+            >
               Fully included
             </span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Minus size={16} color="rgba(255,255,255,0.35)" strokeWidth={2.5} />
-            <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)" }}>
+
+          {/* Partial */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <Minus
+              size={16}
+              color="rgba(255,255,255,0.35)"
+              strokeWidth={2.5}
+            />
+
+            <span
+              style={{
+                fontSize: "0.85rem",
+                color: "rgba(255,255,255,0.55)",
+              }}
+            >
               Partial / limited
             </span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <X size={16} color="rgba(255,255,255,0.25)" strokeWidth={2.5} />
-            <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)" }}>
+
+          {/* Not offered */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <X
+              size={16}
+              color="rgba(255,255,255,0.25)"
+              strokeWidth={2.5}
+            />
+
+            <span
+              style={{
+                fontSize: "0.85rem",
+                color: "rgba(255,255,255,0.55)",
+              }}
+            >
               Not offered
             </span>
           </div>
         </div>
       </div>
 
+      {/* Scrollbar */}
       <style>{`
         .comp-wrapper {
           scrollbar-width: thin;
           scrollbar-color: rgba(163,230,53,0.4) transparent;
         }
+
         .comp-wrapper::-webkit-scrollbar {
           height: 6px;
         }
+
         .comp-wrapper::-webkit-scrollbar-thumb {
           background: rgba(163,230,53,0.4);
           border-radius: 10px;
