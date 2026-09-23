@@ -1,4 +1,4 @@
-import { ArrowRightIcon, PlayIcon } from 'lucide-react';
+import { ArrowRightIcon, Download, PlayIcon } from 'lucide-react';
 import { PrimaryButton } from './Buttons';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -103,21 +103,31 @@ useEffect(() => {
                                 thoughtful design, scalable development and performance-driven strategy.
                             </motion.p>
 
-                            <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
-                                initial={{ y: 60, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
-                            >
-                                <a href="#" className="w-full sm:w-auto">
-                                    <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Start your project
-                                        <ArrowRightIcon className="size-4" />
-                                    </PrimaryButton>
-                                </a>
+                          <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
+    initial={{ y: 60, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
+>
+    <a href="#" className="w-full sm:w-auto">
+        <PrimaryButton className="max-sm:w-full py-3 px-7">
+            Start your project
+            <ArrowRightIcon className="size-4" />
+        </PrimaryButton>
+    </a>
 
-                              
-                            </motion.div>
+    
+       <a href="/files/Winxverse_Quotation.pdf"
+        download="Winxverse_Quotation.pdf"
+        className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-7 rounded-full
+                   border border-white/15 bg-white/5 backdrop-blur-sm text-sm font-medium text-gray-100
+                   hover:bg-white/10 hover:border-indigo-300/50 active:scale-95
+                   transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300/60"
+    >
+        <Download className="size-4 text-indigo-300 transition-transform duration-300 group-hover:translate-y-0.5" />
+        Download quotation
+    </a>
+</motion.div>
 
                             {/* <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
                                 initial={{ y: 60, opacity: 0 }}

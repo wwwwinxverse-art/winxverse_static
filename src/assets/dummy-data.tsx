@@ -119,8 +119,7 @@ export const footerLinks = [
       { name: "About", url: "/about" },
       { name: "Services", url: "/services" },
       { name: "Features", url: "/features" },
-      { name: "Contact", url: "/contact" },
-      { name: "FAQ", url: "/faq" },
+      { name: "Contact", url: "/contact" }
     ],
   },
   {

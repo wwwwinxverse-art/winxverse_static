@@ -13,8 +13,7 @@ export default function Navbar() {
     { name: 'Services', to: '/services', type: 'route' },
     { name: 'Features', to: '/feature', type: 'Route' },
     { name: 'Contact', to: '/contact', type: 'route' },
-    { name: 'Blog', to: '/#homeblog', type: 'hash' },
-    { name: 'FAQ', to: '/#faq', type: 'hash' },
+    { name: 'Blog', to: '/#homeblog', type: 'hash' }
   ];
 
   return (

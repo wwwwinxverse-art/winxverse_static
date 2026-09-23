@@ -117,7 +117,7 @@ export default function Footer() {
           </p>
 
           <p className="flex items-center gap-1">
-            Made <span className="text-red-500">❤️</span> by{" "}
+            Designed <span className="text-red-500">❤️</span> by{" "}
             <span className="text-white font-semibold">WXV</span>
           </p>
 

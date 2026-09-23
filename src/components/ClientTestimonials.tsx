@@ -1,52 +1,53 @@
 import { Quote, Star } from "lucide-react";
 
+
 const testimonials = [
   {
     quote:
-      "They didn't just build what we asked for — they questioned our assumptions and delivered something better than the brief.",
-    name: "Priya Nair",
-    role: "Founder, Studio Loom",
-    initials: "PN",
+      "The team understood our requirements clearly and turned our ideas into a solution that was simple, reliable, and easy for our team to use.",
+    name: "Arun Kumar",
+    role: "Founder, Sri Lakshmi Enterprises",
+    initials: "AK",
     rating: 5,
   },
   {
     quote:
-      "Communication was constant and honest. We always knew exactly where the project stood, even when timelines shifted.",
-    name: "Daniel Cho",
-    role: "Head of Product, Fennel",
-    initials: "DC",
+      "What impressed us most was their communication. We received regular updates throughout the project and always knew what was happening.",
+    name: "Kavitha Raj",
+    role: "Managing Director, Greenfield Solutions",
+    initials: "KR",
     rating: 5,
   },
   {
     quote:
-      "Our platform now handles 4x the traffic without breaking a sweat. The architecture decisions made early on are still paying off.",
-    name: "Amara Obi",
-    role: "CTO, Northwind Retail",
-    initials: "AO",
+      "They helped us move our manual business processes into a digital platform. Our team can now manage daily operations much more efficiently.",
+    name: "Suresh Babu",
+    role: "Director, Shree Traders",
+    initials: "SB",
     rating: 5,
   },
   {
     quote:
-      "Launch day was the calmest day of the whole project — which tells you everything about how well it was engineered.",
-    name: "Marcus Reyes",
-    role: "COO, Harbor & Co.",
+      "From the initial discussion to the final launch, the entire development process was smooth. The application is fast, modern, and easy to manage.",
+    name: "Priya Suresh",
+    role: "Founder, Varnam Creations",
+    initials: "PS",
+    rating: 5,
+  },
+  {
+    quote:
+      "We needed a solution that could grow with our business, and the team delivered exactly that. Their support after launch has also been excellent.",
+    name: "Dinesh Kumar",
+    role: "CEO, TamilTech Industries",
+    initials: "DK",
+    rating: 5,
+  },
+  {
+    quote:
+      "They took our initial idea, understood the business requirements, and transformed it into a practical digital product that our customers could use easily.",
+    name: "Meena Rajendran",
+    role: "Director, Kovai Business Solutions",
     initials: "MR",
-    rating: 5,
-  },
-  {
-    quote:
-      "Six months post-launch and they're still the first call we make when something needs fixing or building. That kind of trust isn't common.",
-    name: "Elena Vasquez",
-    role: "Founder, Pale Fire",
-    initials: "EV",
-    rating: 5,
-  },
-  {
-    quote:
-      "They translated a messy, half-formed idea into a product our users actually understand on the first try.",
-    name: "Tomasz Wik",
-    role: "VP Engineering, Cursive",
-    initials: "TW",
     rating: 5,
   },
 ];
